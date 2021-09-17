@@ -1,11 +1,11 @@
-struct Hello {
-    let name: String
+public struct Hello {
+    public let name: String
     
-    init(name: String) {
+    public init(name: String) {
         self.name = name
     }
     
-    func toString() -> String {
+    public func toString() -> String {
         return "Hello, \(name)"
     }
 }

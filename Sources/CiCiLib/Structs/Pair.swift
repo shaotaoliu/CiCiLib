@@ -1,19 +1,19 @@
 import Foundation
 
-struct Pair<T, U> {
-    var first: T
-    var second: U
+public struct Pair<T, U> {
+    public var first: T
+    public var second: U
     
-    init(first: T, second: U) {
+    public init(first: T, second: U) {
         self.first = first
         self.second = second
     }
     
-    func toString() -> String {
+    public func toString() -> String {
         return "(\(first), \(second))"
     }
     
-    func print() {
+    public func print() {
         Swift.print(self.toString())
     }
 }

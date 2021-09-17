@@ -1,13 +1,13 @@
 import Foundation
 
-class Stack<T> {
+public class Stack<T> {
     private var array = [T]()
 
-    func push(element: T) {
+    public func push(element: T) {
         array.append(element)
     }
     
-    func pop() throws {
+    public func pop() throws {
         if array.isEmpty {
             throw StackError.StackIsEmpty
         }
@@ -15,7 +15,7 @@ class Stack<T> {
         array.removeLast()
     }
     
-    func top() throws -> T {
+    public func top() throws -> T {
         if array.isEmpty {
             throw StackError.StackIsEmpty
         }
@@ -23,19 +23,19 @@ class Stack<T> {
         return array.last!
     }
     
-    func isEmpty() -> Bool {
+    public func isEmpty() -> Bool {
         return array.isEmpty
     }
     
-    func size() -> Int {
+    public func size() -> Int {
         return array.count
     }
     
-    func clear() {
+    public func clear() {
         array.removeAll()
     }
 }
 
-enum StackError: Error {
+public enum StackError: Error {
     case StackIsEmpty
 }
