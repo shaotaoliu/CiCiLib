@@ -1,6 +1,7 @@
 import Foundation
 
 public struct Pair<T, U> {
+    
     public var first: T
     public var second: U
     

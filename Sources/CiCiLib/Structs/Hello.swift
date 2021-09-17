@@ -1,5 +1,6 @@
 public struct Hello {
-    public let name: String
+    
+    private let name: String
     
     public init(name: String) {
         self.name = name
@@ -7,5 +8,9 @@ public struct Hello {
     
     public func toString() -> String {
         return "Hello, \(name)"
+    }
+    
+    public func print() {
+        Swift.print(self.toString())
     }
 }

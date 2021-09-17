@@ -1,6 +1,7 @@
 import Foundation
 
 public class Stack<T> {
+    
     private var array = [T]()
 
     public func push(element: T) {
