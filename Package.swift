@@ -21,10 +21,7 @@ let package = Package(
         .target(
             name: "CiCiLib",
             dependencies: [],
-            path: "Sources",
-            resources: [
-                .process("Resources/CiCi.xcassets")
-            ]),
+            path: "Sources"),
         .testTarget(
             name: "CiCiLibTests",
             dependencies: ["CiCiLib"]),

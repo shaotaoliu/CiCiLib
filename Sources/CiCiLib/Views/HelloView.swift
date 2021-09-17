@@ -16,7 +16,9 @@ public struct HelloView: View {
                 .padding()
             
             Image(uiImage: UIImage(named: "hello", in: .module, with: nil)!)
-                
+                .resizable()
+                .frame(width: 100, height: 100, alignment: .center)
+                .aspectRatio(contentMode: .fit)
         }
     }
 }
