@@ -48,6 +48,8 @@ struct ContentView: View {
         a.push(element: 2)
         a.push(element: 3)
         
+        numbers.removeAll()
+        
         while !a.isEmpty() {
             let top = try! a.top()
             numbers.append(top)
