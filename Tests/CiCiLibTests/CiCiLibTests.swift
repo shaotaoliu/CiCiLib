@@ -2,10 +2,12 @@
     @testable import CiCiLib
 
     final class CiCiLibTests: XCTestCase {
-        func testExample() {
-            // This is an example of a functional test case.
-            // Use XCTAssert and related functions to verify your tests produce the correct
-            // results.
-            XCTAssertEqual(CiCiLib().text, "Hello, World!")
+        
+        func testHello() {
+            let name = "Kevin"
+            let hello = Hello(name: name)
+        
+            XCTAssertEqual(hello.toString(), "Hello, \(name)")
         }
+        
     }

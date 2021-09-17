@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CiCiLib",
+        "repositoryURL": "https://github.com/shaotaoliu/CiCiLib",
+        "state": {
+          "branch": "main",
+          "revision": "5529346c4d3c7a96ad4512d620996880aed41755",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

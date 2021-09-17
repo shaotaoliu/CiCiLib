@@ -1,7 +1,7 @@
 struct Hello {
     let name: String
     
-    init(name: name) {
+    init(name: String) {
         self.name = name
     }
     
