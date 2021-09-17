@@ -4,6 +4,9 @@ public class Stack<T> {
     
     private var array = [T]()
 
+    public init() {
+    }
+    
     public func push(element: T) {
         array.append(element)
     }
