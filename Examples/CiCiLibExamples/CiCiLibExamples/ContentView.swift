@@ -9,29 +9,43 @@ struct ContentView: View {
     
     @State private var numbers = [Int]()
     
+    @State private var name: String = ""
+    @State private var first: String = ""
+    @State private var second: String = ""
+    
     var body: some View {
         VStack {
-            HelloView(name: "Kevin")
-                .padding()
-
-            Text(pair.toString())
-                .padding()
+            TextField("Name", text: $name)
+                .frame(height: 30)
+                .border(Color.blue, width: 1)
+                .padding([.leading, .trailing])
             
-            Text(hello.toString())
-                .padding()
+            HStack {
+                TextField("First", text: $first)
+                    .frame(height: 30)
+                    .border(Color.blue, width: 1)
+                
+                TextField("Second", text: $second)
+                    .frame(height: 30)
+                    .border(Color.blue, width: 1)
+            }
+            .padding([.leading, .trailing])
+            
+            
+            HelloView(name: name)
+
+            Text(Pair(first: first, second: second).toString())
+                .padding(5)
+            
+            Text(Hello(name: name).toString())
+                .padding(5)
             
             Button("Test Stack") {
                 testStack()
             }
-            .padding()
+            .padding(5)
             
             VStack(alignment: .leading) {
-                if !numbers.isEmpty {
-                    Text("Stack")
-                        .font(.title)
-                        .padding()
-                }
-                
                 List(numbers, id: \.self) { num in
                     Text("\(num)")
                 }
