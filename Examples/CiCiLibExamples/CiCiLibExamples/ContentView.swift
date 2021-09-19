@@ -3,12 +3,7 @@ import CiCiLib
 
 struct ContentView: View {
     
-    private let pair = Pair(first: 1, second: "One")
-    private let hello = Hello(name: "Jason")
-    private let stack = Stack<Int>()
-    
     @State private var numbers = [Int]()
-    
     @State private var name: String = ""
     @State private var first: String = ""
     @State private var second: String = ""
@@ -18,7 +13,7 @@ struct ContentView: View {
             TextField("Name", text: $name)
                 .frame(height: 30)
                 .border(Color.blue, width: 1)
-                .padding([.leading, .trailing])
+                .padding([.top, .leading, .trailing])
             
             HStack {
                 TextField("First", text: $first)
