@@ -1,5 +1,4 @@
 import SwiftUI
-import Foundation
 
 @available(iOS 13.0, *)
 public struct HelloView: View {
@@ -20,5 +19,12 @@ public struct HelloView: View {
                 .frame(width: 100, height: 100, alignment: .center)
                 .aspectRatio(contentMode: .fit)
         }
+    }
+}
+
+@available(iOS 13.0, *)
+struct HelloView_Previews: PreviewProvider {
+    static var previews: some View {
+        HelloView(name: "World")
     }
 }
